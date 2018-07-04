@@ -8,11 +8,20 @@
  * Controller of the photosApp
  */
 angular.module('photosApp')
-  .controller('MainCtrl', function (photos) {
+  .controller('MainCtrl', function ($scope, photos) {
   console.log('main', photos);
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    //$scope.photos = photos;
+  var latest3Albums = [];
+  var albums = {};
+    for(var i = 0, len = photos.length; i<len; i++){
+      if(!albums[photos[i].albumId]){
+        albums[photos[i].albumId]=[];
+      }
+      albums[photos[i].albumId].push(photos[i]);
+    }
+  
+  $scope.albums = albums;
+  
+  console.log(albums);
+  
   });
