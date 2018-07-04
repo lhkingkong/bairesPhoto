@@ -1,9 +1,11 @@
-<div class="jumbotron">
- Albums
-  <div ng-repeat="album in albums | limitTo:3">
-    <div ng-repeat="photo in album | limitTo:2">
+<div>
+  <h1>Albums</h1>
+  <div>
+  <div class="album" ng-repeat="album in newAlbums">
+    <div class="photo" ng-repeat="photo in album | limitTo:2">
       <img src="{{photo.thumbnailUrl}}"/>
       <label>{{photo.title}}</label>
     </div>
+  </div>
   </div>
 </div>

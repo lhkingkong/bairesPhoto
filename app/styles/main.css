@@ -81,3 +81,29 @@ body {
     border-bottom: 0;
   }
 }
+
+.album{
+  border: 2px solid blue;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+  vertical-align: top;
+}
+.album:first-child{
+  border: 2px solid green;
+}
+.album:last-child{
+  border: 2px solid purple;
+}
+
+.album .photo{
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.album .photo label{
+  width: 150px;
+  padding: 10px;
+}
